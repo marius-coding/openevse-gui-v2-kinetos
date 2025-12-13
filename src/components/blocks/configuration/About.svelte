@@ -27,7 +27,7 @@ import Logo  from "../../../assets/logo-mini.png"
 			</div> -->
 			<div class="is-inline-block has-text-weight-bold">
 				<div class="my-1">
-					<a class="is-size-6 is-flex is-align-items-center" href="https://github.com/OpenEVSE/ESP32_WiFi_V4.x" on:click|preventDefault={()=>{window.open("https://github.com/OpenEVSE/ESP32_WiFi_V4.x");return false}}>
+					<a class="is-size-6 is-flex is-align-items-center" href="https://github.com/marius-coding/openevseForKinetos-esp" on:click|preventDefault={()=>{window.open("https://github.com/marius-coding/openevseForKinetos-esp");return false}}>
 						<iconify-icon inline icon="icon-park-outline:github"></iconify-icon>
 						<span class="ml-1">OpenEVSE WiFi firmware</span>
 					</a>

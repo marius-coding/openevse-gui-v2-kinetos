@@ -235,4 +235,13 @@ $: setShaper($uistates_store.shaper)
 		<Limit />
 	</div>
 </Box>
+
+<div class="has-text-centered mt-3 is-size-7 has-text-grey-light">
+	{#if $config_store.version}
+		<div>Version: {$config_store.version}</div>
+	{/if}
+	{#if $config_store.build_date}
+		<div>Build: {$config_store.build_date}</div>
+	{/if}
+</div>
 {/if}
