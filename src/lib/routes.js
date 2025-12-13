@@ -22,6 +22,7 @@ import Dev              from '../routes/Dev.svelte'
 import About            from '../routes/About.svelte'
 import Certificates     from '../routes/Certificates.svelte'
 import Wizard           from '../routes/Wizard.svelte'
+import LedColors        from '../routes/LedColors.svelte'
 
 
 export const routes = {
@@ -47,6 +48,7 @@ export const routes = {
     '/configuration/dev': Dev,
     '/configuration/about': About,
     '/configuration/certificates': Certificates,
+    '/configuration/ledcolors': LedColors,
     '/wizard/:step?':Wizard,
     // Catch-all
     // This is optional, but if present it must be the last

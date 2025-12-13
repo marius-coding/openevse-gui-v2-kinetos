@@ -14,6 +14,7 @@
 				<ConfigMenuButton url="/configuration/firmware" icon="fa6-solid:microchip" name={$_("config.titles.firmware")} />
 				<ConfigMenuButton url="/configuration/evse" icon="mdi:evse" name={$_("config.titles.evse")} />
 				<ConfigMenuButton url="/configuration/safety" icon="mdi:shield-alert-outline" name={$_("config.titles.safety")} />
+				<ConfigMenuButton url="/configuration/ledcolors" icon="ic:outline-light-mode" name={$_("config.titles.led")} />
 				<ConfigMenuButton url="/configuration/time" icon="fa6-solid:clock" name={$_("config.titles.time")} />
 				<ConfigMenuButton url="/configuration/http" icon="mdi:web" name={$_("config.titles.http")} />
 				<ConfigMenuButton url="/configuration/mqtt" icon="simple-icons:mqtt" name={$_("config.titles.mqtt")} />
