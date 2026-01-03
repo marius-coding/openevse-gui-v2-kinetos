@@ -9,14 +9,15 @@
 	let mounted = false
 
 	// LED color states matching OpenEVSE LCD colors
+	// Actual EVSE state-to-color mapping: NOT_CONNECTED->GREEN, CONNECTED->YELLOW, CHARGING->TEAL
 	const ledStates = [
 		{ key: 'led_color_off',    name: 'Off',    desc: 'LED off state (black)', default: '000000' },
-		{ key: 'led_color_red',    name: 'Red',    desc: 'Error/Fault state', default: 'FF6347' },
-		{ key: 'led_color_green',  name: 'Green',  desc: 'Ready/Connected state', default: '32CD32' },
-		{ key: 'led_color_yellow', name: 'Yellow', desc: 'Waiting/Sleeping state', default: 'FFD700' },
-		{ key: 'led_color_blue',   name: 'Blue',   desc: 'Charging state', default: '1E90FF' },
-		{ key: 'led_color_violet', name: 'Violet', desc: 'Vent required state', default: 'BA55D3' },
-		{ key: 'led_color_teal',   name: 'Teal',   desc: 'Custom state', default: '48D1CC' },
+		{ key: 'led_color_red',    name: 'Red',    desc: 'Error/Fault states ', default: 'FF6347' },
+		{ key: 'led_color_green',  name: 'Green',  desc: 'Not Connected / Waiting for vehicle', default: '32CD32' },
+		{ key: 'led_color_yellow', name: 'Yellow', desc: 'Connected / Ready to charge', default: 'FFD700' },
+		{ key: 'led_color_blue',   name: 'Blue',   desc: 'Unused (reserved)', default: '1E90FF' },
+		{ key: 'led_color_violet', name: 'Violet', desc: 'Sleeping/Disabled (vehicle not connected)', default: 'BA55D3' },
+		{ key: 'led_color_teal',   name: 'Teal',   desc: 'Charging OR Sleeping/Disabled (vehicle connected)', default: '48D1CC' },
 		{ key: 'led_color_white',  name: 'White',  desc: 'Default/Fallback state', default: 'FFFFFF' }
 	]
 
