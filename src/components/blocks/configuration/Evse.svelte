@@ -10,6 +10,7 @@
 	import Switch				 from "./../../ui/Switch.svelte";
 	import SliderForm 		     from "./../../ui/SliderForm.svelte";
 	import { config_store } 	 from "./../../../lib/stores/config.js";
+	import { uisettings_store } from "./../../../lib/stores/uisettings.js";
 	import InputForm 			 from "./../../ui/InputForm.svelte";
 	import Box 					 from "./../../ui/Box.svelte";
 	import { submitFormData } 	 from "./../../../lib/utils.js"
@@ -265,6 +266,19 @@
 				</Borders>
 			</div>
 			{/if}
+			<div class="my-1 is-flex is-justify-content-center" >
+				<Borders grow={true} has_help={true}>
+					<div slot="help">
+						When enabled, the charging current limit will automatically reset to maximum after each charging session ends. When disabled, your manual current setting will persist across multiple charging sessions.
+					</div>
+					<div class="is-uppercase has-text-weight-bold is-size-6 mb-3">Auto Release Current Limit</div>
+					<Switch
+						name="auto_release"
+						label="{$uisettings_store.auto_release ? 'Enabled' : 'Disabled'}"
+						bind:checked={$uisettings_store.auto_release}
+					/>
+				</Borders>
+			</div>
 		</div>
 	</div>
 

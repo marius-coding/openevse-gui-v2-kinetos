@@ -86,6 +86,11 @@
 					data.charge_current = $override_store.charge_current
 				else 
 					data.charge_current = $config_store.max_current_soft
+				// Preserve auto_release setting if it exists, otherwise use UI default
+				if ($override_store?.auto_release != undefined)
+					data.auto_release = $override_store.auto_release
+				else
+					data.auto_release = $uisettings_store.auto_release
 				await serialQueue.add(() => override_store.upload(data))
 				break
 			default: 
